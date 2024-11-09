@@ -12,8 +12,8 @@ import dotenv from "dotenv";
 dotenv.config({});
 const app = express();
 
-const _dirname=path.resolve();
 const PORT = process.env.PORT || 3000;
+const _dirname=path.resolve();
 
 // middleware
 app.use(express.json());
