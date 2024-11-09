@@ -13,6 +13,7 @@ dotenv.config({});
 const app = express();
 
 const _dirname=path.resolve();
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
@@ -37,7 +38,7 @@ app.get('*',(_,res)=>{
 
 
 
-const PORT = process.env.PORT || 3000;
+
 app.listen(PORT, () => {
   connectDB();
   console.log(`server running at ${PORT} port`);
