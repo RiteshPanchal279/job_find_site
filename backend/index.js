@@ -12,8 +12,8 @@ import dotenv from "dotenv";
 dotenv.config({});
 const app = express();
 
-const PORT = process.env.PORT || 3000;
 const _dirname=path.resolve();
+const PORT = process.env.PORT || 3000;
 
 // middleware
 app.use(express.json());
@@ -35,7 +35,6 @@ app.use(express.static(path.join(_dirname,"/frontend/dist")));
 app.get('*',(_,res)=>{
   res.sendFile(path.resolve(_dirname,"frontend","dist","index.html"))
 });
-
 
 
 app.listen(PORT, () => {
